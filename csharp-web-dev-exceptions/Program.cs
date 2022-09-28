@@ -24,7 +24,7 @@ namespace csharp_web_dev_lsn9exceptions
         static int CheckFileExtension(string fileName)
         {
             // Write your code here!
-            if (fileName == null || fileName == "")
+            if (string.IsNullOrEmpty(fileName))  //or IsNullorWhitespace 
             {
                 throw new ArgumentNullException("fileName","Student did not submit any work.");
             }
@@ -34,7 +34,7 @@ namespace csharp_web_dev_lsn9exceptions
                 {
                     return 1;
                 }
-                else
+                else 
                 {
                     return 0;
                 }
